@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export JRE_HOME="<%= node['java']['java_home'] %>"
+export JAVA_HOME="<%= node['java']['java_home'] %>"
+cd <%= node['confluence']['install_path'] %>
+exec 2>&1
+exec chpst -u <%= node['confluence']['run_user'] %> <%= node['confluence']['install_path'] %>/current/bin/startup.sh

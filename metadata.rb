@@ -1,0 +1,12 @@
+name             "confluence"
+maintainer       "Bryan McLellan"
+maintainer_email "btm@loftninjas.org"
+license          "Apache 2.0"
+description      "Installs confluence and starts it as a runit service"
+version          "0.0.3"
+
+depends "openssl"
+depends "runit"
+depends "java"
+depends "ark", ">= 0.3.0"
+depends "mysql"
